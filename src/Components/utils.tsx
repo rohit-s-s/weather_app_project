@@ -3,6 +3,7 @@ export type Data = {
         {
             main: string,
             description: string,
+             icon: string
         }
     ],
     main: {

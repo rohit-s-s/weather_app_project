@@ -19,7 +19,6 @@ function Form({ formHandle, inputValue, setInputValue }: Form) {
           size="small"
           required
           autoComplete="off"
-          style={{color:"black"}}
           value={inputValue}
           onChange={(event) => setInputValue(event?.target.value)}
           InputProps={{ 
