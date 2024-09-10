@@ -5,6 +5,8 @@ import { Data } from "./Components/utils";
 import Form from "./Components/Form";
 import Display from "./Components/Display";
 
+const apiKey = import.meta.env.VITE_APP_ID
+
 function App() {
   const [inputValue,setInputValue] = useState<string>("")
   const [data, setData] = useState<Data>();
@@ -18,7 +20,7 @@ function App() {
 
   useEffect(() => {
     try{
-      axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=b1b15e88fa797225412429c1c50c122a1`).then((response) => {
+      axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`).then((response) => {
         setData(response.data);
       });
     }catch(err){
